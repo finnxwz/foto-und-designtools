@@ -2,6 +2,14 @@
 
 Dein persönlicher, lokaler Werkzeugkasten für Foto und Design.
 
+## Online öffnen
+
+**GitHub Pages:** https://finnxwz.github.io/foto-und-designtools/
+
+Die Website wird direkt aus dem Branch `main` veröffentlicht. Nach einem Push aktualisiert GitHub Pages die Seite automatisch. `.nojekyll` sorgt für die unveränderte Auslieferung der statischen Dateien.
+
+Auch online werden deine Bilder und eigenen Fontdateien im Browser verarbeitet. Die Statistik wird im jeweiligen Browser gespeichert; die Online-Adresse und eine lokal geöffnete Datei haben getrennte Browserspeicher. Google Fonts werden bei Auswahl von Google geladen.
+
 ## Öffnen
 
 Die Datei **index.html** mit einem Doppelklick im Browser öffnen. Es sind keine Installation und kein Server erforderlich. Foto-, Farbpaletten-, QR- und Icontools funktionieren offline. Im Schriftchecker werden ausgewählte **Google Fonts** bei Bedarf über das Internet geladen; installierte PC-Schriften und eigene Fontdateien bleiben lokal.
