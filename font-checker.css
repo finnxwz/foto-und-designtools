@@ -1,0 +1,109 @@
+.font-sources { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 18px; padding: 11px 15px; border: 1px solid var(--line); border-radius: 12px; background: var(--dialog); margin-bottom: 18px; }
+.font-source-counts { font-size: 11px; color: var(--muted); }
+.font-sources > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.font-source-menu { position: relative; font-size: 11px; }
+.font-source-menu summary { cursor: pointer; color: var(--text); padding: 5px; }
+.font-source-menu > div { position: absolute; right: 0; top: calc(100% + 8px); z-index: 3; display: grid; gap: 8px; min-width: 180px; padding: 12px; background: var(--dialog); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 25px #00000016; }
+.font-sources .secondary-button { font-size: 11px; padding: 8px 11px; }
+.font-workspace { display: grid; grid-template-columns: minmax(290px, .95fr) minmax(0, 1.7fr); gap: 22px; align-items: start; }
+.font-control-panel, .font-preview-panel { min-width: 0; }
+.font-role-grid { display: grid; gap: 12px; }
+.font-role { padding: 16px; border: 1px solid var(--line); border-radius: 15px; background: var(--dialog); }
+.font-role h2 { font-size: 13px; margin: 0 0 10px; }
+.font-picker { width: 100%; display: grid; grid-template-columns: minmax(0,1fr) 16px; gap: 5px 8px; align-items: center; text-align: left; padding: 10px 11px; border: 1px solid var(--control-border,var(--line)); border-radius: 10px; background: var(--tool-tint); cursor: pointer; color: var(--text); }
+.font-picker strong { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.font-picker small { grid-column: 1; color: var(--muted); font-size: 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.font-picker > span { grid-column: 2; grid-row: 1 / 3; }
+.font-picker:hover { border-color: var(--interaction,var(--tool-accent)); }
+.font-picker.font-load-error { border-color: #9f392a; }
+.font-role .control-field { margin-top: 11px; }
+.font-role .control-field select { margin-top: 1px; }
+.font-random-settings { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 12px; margin: 14px 0 12px; }
+.font-latin { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--muted); padding-bottom: 10px; }
+.font-latin input { margin: 0; accent-color: var(--interaction,var(--tool-accent)); }
+.font-control-panel .font-random { width: 100%; margin: 0; padding: 12px 14px; }
+.font-role-grid + .font-random { margin-top: 14px; }
+.font-random > span { margin: 0 8px 0 0; font-size: 20px; vertical-align: middle; }
+.font-adjustments { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 11px; font-size: 11px; color: var(--muted); }
+.font-adjustments summary { cursor: pointer; }
+.font-adjustments .control-row { margin-top: 12px; }
+.font-examples { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.font-specimen { padding: clamp(22px,3vw,38px); background: var(--dialog); border: 1px solid var(--line); border-radius: 18px; overflow-wrap: anywhere; min-height: 330px; }
+.font-specimen .sample-heading { margin: 16px 0 0; line-height: 1.15; letter-spacing: -.7px; font-family: Georgia,serif; font-weight: 400; }
+.font-specimen .sample-body { font-family: Arial,sans-serif; color: var(--text); margin: 12px 0 0; hyphens: auto; }
+.font-preview-label { font-size: 10px; color: var(--muted); line-height: 1.5; overflow-wrap: anywhere; }
+.font-text-divider { border-top: 1px solid var(--line); margin: 24px 0; }
+.font-browser { width: min(790px,calc(100% - 32px)); padding: 26px; max-height: calc(100dvh - 32px); }
+.font-browser h2 { font-size: 23px; margin: 0 38px 20px 0; }
+.font-browser-close { position: absolute; top: 15px; right: 15px; font-size: 24px; }
+.font-browser-filters { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 12px; }
+.font-browser-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-content: start; max-height: min(430px,calc(100dvh - 260px)); overflow: auto; margin-top: 15px; padding: 3px; scrollbar-width: thin; }
+.font-browser-option { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; text-align: left; border: 1px solid var(--control-border,var(--line)); border-radius: 10px; background: var(--dialog); color: var(--text); padding: 12px; cursor: pointer; min-width: 0; }
+.font-browser-option strong { font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+.font-browser-option span { font-size: 10px; color: var(--muted); }
+.font-browser-option:hover, .font-browser-option[aria-selected="true"] { background: var(--tool-tint); border-color: var(--interaction,var(--tool-accent)); }
+.font-browser-option[aria-selected="true"] { box-shadow: inset 0 0 0 1px var(--interaction,var(--tool-accent)); }
+.font-browser-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 16px; }
+.font-browser-footer button { font-size: 11px; padding: 8px 12px; }
+.font-browser-count { font-size: 11px; color: var(--muted); }
+.font-browser-empty { font-size: 12px; color: var(--muted); }
+@media (min-width: 761px) and (max-height: 760px) {
+  .font-role-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .font-workspace { grid-template-columns: minmax(320px,1fr) minmax(0,1.65fr); }
+  .font-role { padding: 12px; }
+  .font-picker { padding: 9px; }
+  .font-picker strong { font-size: 12px; }
+  .font-sources { margin-bottom: 14px; }
+  .font-specimen { min-height: 300px; padding: 26px; }
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .font-workspace { grid-template-columns: minmax(260px,1fr) minmax(0,1.3fr); gap: 16px; }
+  .font-role { padding: 11px; }
+  .font-picker small { font-size: 8px; }
+  .font-picker strong { font-size: 12px; }
+  .font-specimen { padding: 20px; }
+}
+@media (max-width: 760px) {
+  .font-sources { padding: 8px 10px; gap: 7px; margin-bottom: 10px; }
+  .font-source-counts { font-size: 10px; }
+  .font-sources > div { gap: 8px; }
+  .font-sources .secondary-button { padding: 6px 8px; font-size: 10px; }
+  .font-workspace { grid-template-columns: minmax(0,1fr); gap: 8px; }
+  .font-role-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .font-role { padding: 8px; border-radius: 12px; }
+  .font-role h2 { margin-bottom: 4px; font-size: 11px; }
+  .font-picker { padding: 6px 7px; gap: 3px; }
+  .font-picker strong { font-size: 12px; }
+  .font-picker small { font-size: 8px; }
+  .font-role .control-field { margin-top: 5px; }
+  .font-random-settings { margin: 8px 0; gap: 8px; }
+  .font-control-panel .font-random { padding: 7px 10px; font-size: 11px; }
+  .font-role-grid + .font-random { margin-top: 8px; }
+  .font-latin { font-size: 9px; padding-bottom: 8px; }
+  .font-adjustments { margin-top: 8px; padding-top: 7px; font-size: 10px; }
+  .font-examples { gap: 8px; margin-bottom: 8px; }
+  .font-specimen { min-height: 0; padding: 12px; border-radius: 13px; }
+  .font-specimen .sample-heading { margin-top: 8px; }
+  .font-text-divider { margin: 10px 0; }
+  .font-specimen .sample-body { margin-top: 7px; }
+  .font-preview-label { font-size: 9px; }
+  .font-browser { padding: 20px 14px; }
+  .font-browser h2 { font-size: 20px; margin-bottom: 14px; }
+  .font-browser-filters { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .font-browser-filters > label:first-child { grid-column: 1 / -1; }
+  .font-browser-list { grid-template-columns: 1fr; max-height: calc(100dvh - 305px); }
+  .font-browser-footer { gap: 8px; }
+  .font-browser-count { font-size: 9px; }
+}
+
+@media (max-width: 760px) and (max-height: 700px) {
+  .font-sources { padding-top: 6px; padding-bottom: 6px; margin-bottom: 8px; }
+  .font-role { padding: 6px; }
+  .font-picker { padding-top: 5px; padding-bottom: 5px; }
+  .font-role .control-field { margin-top: 3px; }
+  .font-role-grid + .font-random { margin-top: 6px; }
+  .font-control-panel .font-random { padding-top: 5px; padding-bottom: 5px; }
+  .font-adjustments { margin-top: 6px; padding-top: 5px; }
+  .font-specimen { padding: 10px; }
+  .font-text-divider { margin-top: 8px; margin-bottom: 8px; }
+}
